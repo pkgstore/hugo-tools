@@ -64,7 +64,7 @@ function Start-HugoPost() {
     "${Type}/${Path}"
   )
 
-  Write-Host "${Hugo}" $CMD
+  & "${Hugo}" $CMD
 }
 
 function Start-Script() {
