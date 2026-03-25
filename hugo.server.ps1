@@ -39,12 +39,13 @@ param(
 function Start-HugoServer() {
   $CMD = @(
     'server',
-    '--environment', "${Env}",
     '--port', "${Port}",
-    '--buildDrafts',
-    '--printI18nWarnings',
     '--source', "${Src}"
     '--cacheDir', "${Src}\cache",
+    '--environment', "${Env}",
+    '--logLevel', 'info',
+    '--buildDrafts',
+    '--printI18nWarnings',
     '--gc'
   )
 
